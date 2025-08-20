@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cubeball</title>
+    <style>
+      html, body { margin:0; height:100%; background:#111; overflow:hidden; }
+      .hud { position:absolute; z-index:10; color:#fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+      #timerCenter { top:12px; left:50%; transform:translateX(-50%); font-weight:800; font-size:54px; padding:6px 16px; background:rgba(0,0,0,.6); border-radius:8px; }
+      /* 记分靠近时间，字体更大 */
+      #scoreLeft { left:calc(50% - 140px); top:74px; font-size:42px; padding:4px 12px; background:rgba(0,0,0,.55); border-radius:8px; }
+      #scoreRight { right:calc(50% - 140px); top:74px; font-size:42px; padding:4px 12px; background:rgba(0,0,0,.55); border-radius:8px; }
+      #controls { left:12px; bottom:12px; background:rgba(0,0,0,.35); padding:8px 10px; border-radius:8px; font-size:14px; }
+      #toolbar { right:12px; bottom:12px; display:flex; gap:8px; }
+      #toolbar button { padding:8px 12px; font-size:14px; border-radius:6px; border:1px solid #fff3; color:#fff; background:#222a; cursor:pointer; }
+      #toolbar button:hover { background:#333a; }
+    </style>
+    <script type="module" crossorigin src="/assets/index-1a0a2a7c.js"></script>
+  </head>
+  <body>
+    <div id="timerCenter" class="hud">60</div>
+    <div id="scoreLeft" class="hud">0</div>
+    <div id="scoreRight" class="hud">0</div>
+    <div id="controls" class="hud">P1: WASD | P2: ↑↓←→</div>
+    <div id="toolbar" class="hud">
+      <button id="restartBtn">Restart</button>
+      <button id="toggleDayNightBtn">Day/Night</button>
+    </div>
+
+    <div id="app"></div>
+    
+  </body>
+</html>
