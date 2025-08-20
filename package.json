@@ -1,0 +1,25 @@
+{
+  "name": "cubeball",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@types/three": "^0.179.0",
+    "gh-pages": "^6.1.1",
+    "typescript": "~5.8.3",
+    "vite": "^4.5.3",
+    "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "cannon-es": "^0.20.0",
+    "three": "^0.179.1"
+  }
+}
